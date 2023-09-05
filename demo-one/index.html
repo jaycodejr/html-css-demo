@@ -12,6 +12,12 @@
   </head>
   <body>
     <div class="container">
+      <div class="header">
+        <p>Hello,</p>
+        <p>
+          Welcome to <strong><em>iPlanner</em></strong>
+        </p>
+      </div>
       <div class="todo-shadow">
         <div class="todo-input">
           <input type="text" placeholder="What will you do today?" />
@@ -23,27 +29,24 @@
         <div class="todo-list">
           <div class="todo-item">
             <div>
-              <input type="checkbox" name="" id="" />
-              <p>I will write new code tonight</p>
-            </div>
-            <div>
-              <span><i class="fa fa-check-circle"></i></span>
-              <span><i class="fa fa-trash-o"></i></span>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div>
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" />
               <p>Learn react development</p>
             </div>
             <div>
-              <span><i class="fa fa-check-circle"></i></span>
-              <span><i class="fa fa-trash"></i></span>
+              <span class="todo-check"><i class="fa fa-check-circle"></i></span>
+              <span class="todo-remove"><i class="fa fa-trash-o"></i></span>
             </div>
           </div>
         </div>
       </div>
       <div class="todo-clear"></div>
+      <p class="footer">
+        JayCode &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        . All Rights Reserved
+      </p>
     </div>
   </body>
 </html>
