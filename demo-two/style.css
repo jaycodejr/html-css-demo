@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #dcdcdc;
+}
+
+.accordion {
+  margin: 60px auto;
+  padding: 10px;
+  width: 600px;
+  background-color: rgb(245, 244, 244);
+}
+
+.item {
+  background-color: rgb(252, 252, 252);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px;
+
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  column-gap: 10px;
+
+  justify-content: center;
+  align-content: center;
+
+  align-items: center;
+  justify-items: start;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.number {
+  font-size: 16px;
+  font-weight: 600;
+  color: #a9a9a9;
+}
+
+.text {
+  font-size: 16px;
+  color: #585858;
+}
+
+.icon {
+  align-self: flex-end;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 15px;
+  padding: 10px 0px;
+}
+
+.close .content {
+  display: none;
+}
+
+.open {
+  border-top: 3px solid rgb(13, 143, 13);
+}
+
+.open .number,
+.open .text {
+  font-weight: bold;
+}
+
+.open .number,
+.open .text {
+  color: rgb(13, 143, 13);
+}
