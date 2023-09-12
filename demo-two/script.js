@@ -1,13 +1,15 @@
-let iconElements = document.getElementsByClassName("icon");
+let log = console.log;
+let iconElements = document.getElementsByClassName("item");
 
 let onIconToggleEvent = function () {
-  let parent = this.parentElement;
-  let isClosed = parent.classList.contains("close");
+  let elem = this;
+  let isClosed = elem.classList.contains("close");
 
-  this.innerHTML = isClosed ? "&ndash;" : "+";
+  let iconElem = elem.querySelector(".icon");
+  iconElem.innerHTML = isClosed ? "-" : "+";
 
-  parent.classList.add(isClosed ? "open" : "close");
-  parent.classList.remove(isClosed ? "close" : "open");
+  elem.classList.add(isClosed ? "open" : "close");
+  elem.classList.remove(isClosed ? "close" : "open");
 };
 
 for (let i = 0; i < iconElements.length; i++) {
